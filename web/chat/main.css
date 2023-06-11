@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    color: #000000;
+    background-color: beige;
+}
+
+#aa{
+border-style: solid;
+    border: groove;
+    width: 50%;
+    left: 25%;
+    float: left;
+    top: 20%;
+    font-size: 30px;
+    font-style: italic;
+    position: absolute;
+    border-radius: 20px;
+}
+
+#spanarea{
+    background: white;
+    width: 40%;
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    height: 500px;
+    border-radius: 20px;
+    border-style: solid;
+    border: groove;}
+#buttona{
+    position: absolute;
+    top: 70%;
+    background: beige;
+    width: 10%;
+    left: 45%;
+    height: 80px;
+    border-radius: 15px;
+
+}

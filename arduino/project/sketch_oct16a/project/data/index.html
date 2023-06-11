@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>基于Labview和单片机的温湿度监测网络平台</title>
+    <script type="text/javascript" src="clock.js"></script>
+</head>
+<body>
+	<center>
+        <a href="https://www.ahu.edu.cn/" target="_black"><img src="/img/AHU.png" alt="安徽大学"></a>
+    <h2>基于Labview和单片机的<br>温湿度监测网络平台</h2>
+    <h3 id="date"></h3>
+    <script>
+        
+    setInterval(function() {
+      var DHT=GetDHT();
+      document.getElementById("DHTT").innerHTML=(DHT-(DHT%100))/100;
+      document.getElementById("DHTH").innerHTML=DHT%100;
+    },2000);
+
+    function GetDHT() {
+      var xhttp = new XMLHttpRequest();
+          var DHT=0;
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        DHT = Number(this.responseText);
+        console.log(DHT);
+        }
+      };
+      xhttp.open("GET", "/getDHT", false);
+      xhttp.send();
+      return DHT;
+    }
+    </script>
+    <table border="2" >
+        <caption>安徽大学集成光电器件工程训练<br>指导教师：李劲松<br>学号：B01914005<br>姓名：苏柯宁</caption>
+        <tr>
+            <td>时间</td>
+            <td>
+                <span id="msg"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>温度/^C</td>
+            <td id="DHTT">temperature</td>
+        </tr>
+        <tr>
+            <td>湿度/%</td>
+            <td id="DHTH"> humidty</td>
+        </tr>
+    </table>
+	</center>
+</body>
+</html>

@@ -1,0 +1,150 @@
+body {
+    font-family: sans-serif;
+    color: #000000;
+    background-color:rgb(243, 231, 234);
+}
+
+a:link {color:#000000;}  
+a:visited {color:#000000;}  
+a:hover {color:rgb(68, 71, 66);}  
+a:active {color:rgb(68, 71, 66);}
+
+p.red {
+    color: red;
+}
+
+table{
+    border-collapse: collapse;
+    width: 75%;
+}
+
+table, td, th, tr {
+    border:solid;
+    font-size: 100%;
+    text-align: center;
+}
+
+td{
+    height: 20%;
+}
+
+caption {
+    caption-side: bottom;
+    text-align: right;
+    font-size: 100%;
+}
+
+h3, h2, a{
+ font-size: 200%;
+}
+
+center{
+ margin-top: auto;
+ margin-bottom: auto;
+}
+
+h3 {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#datediv{
+    display: flex;
+    width: 100%;
+}
+ 
+
+#date{
+    float: right;
+    margin-right: 0;
+    margin-left: auto;    
+}
+
+#msg{
+    float: right;
+    display: flex;
+}
+
+
+#user{
+    text-decoration: none;    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(216, 215, 238);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+li {
+    float: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+img{display: block;margin: auto;}
+
+li a ,.dropbtn {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width:96px;
+    height:100%;
+     display:block;
+    
+}
+li div a{
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width:100%;
+    height:100%;
+     display:block;
+}
+li div {text-align: center;}
+li a:hover, .dropdown:hover {
+    background-color: #99a0d0;
+}
+
+.dropdown {
+    display: inline-block;
+    width: 128px;
+    height: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    max-width: 128px;
+    border: 0px;
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 96px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#cityline{
+display: flex ;
+flex-direction:column ;
+width: 10%;
+}

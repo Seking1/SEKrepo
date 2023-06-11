@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>基于Labview和单片机的温湿度监测网络平台</title>
+    <script type="text/javascript" src="/project/weather/weather.js"></script>
+    <script type = "text/javascript" src = "inner.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    
+</head>
+<body>
+    <div>
+       <ul id="mainchart"> 
+        <li><a href="https://www.ahu.edu.cn/" target="_black" id="logo"><img src="AHU.png" alt="安徽大学" class="center"></a></li>       
+   <li><h2>基于Labview和单片机的温湿度监测网络平台</h2></li>
+   <li id="login"><a class="active" href="/project/mainfile/index.html" >主页</a>
+    <div class="dropdown">
+        <a id="usermanu" class="dropbtn">用户</a>
+        <div class="dropdown-content">
+            <a href="/project/register/register.php" id="user">登录</a>
+            <br>
+            <a href="/project/register/register.php" id="user">注册</a>
+        </div>
+    </div>
+    </li>
+  </ul>  </div>
+  <div id="datediv">
+    <h3 id="date">date</h3>
+    <h3 id= "msg">msg</h3>
+    </div>
+    <center>
+    <table border="2">
+        <caption>温湿度监测网络平台<br>指导教师：李劲松<br>学号：B01914005<br>姓名：苏柯宁</caption>
+        <tr>
+            <td>id<button onclick="iddate();">更新</button></td>
+            <td colspan="2"><span id = "dateidNumber">0</span></td>
+        </tr>
+        <tr>
+            <td rowspan="2">时间范围</td>
+            <td><span>mintime</span></td> 
+            <td><span id="timespanmin">time</span></td>           
+        </tr>
+        <tr>
+            <td><span>maxtime</span></td>
+            <td><span id="timespanmax">time</span></td> 
+        </tr>
+        <tr>
+            <td>记录时间</td>
+            <td colspan="2"><span id="time">time</span></td>
+        </tr>
+        <tr>
+            <td>设备</td>
+            <td colspan="2"><span id="dev">dev/#</span></td>
+        </tr>
+        <tr>
+            <td >温度/^C</td>
+            <td colspan="2" id="DHTT">temperature</td>
+        </tr>
+        <tr>
+            <td >湿度/%</td>
+            <td id="DHTH" colspan="2"> humidty</td>
+        </tr>
+    </table>
+    <div>      
+        <input id="cityname" placeholder="城市名称"><button onclick="checkcity()">提交</button></div>
+    <div><ul id="cityline"></ul></div>
+    <div id="weather"></div>
+    <div id="chart"></div>
+    </center>
+<a href="/project/mobile/mobile.html" style="float:right;"><b>访问手机端</b></a>
+</body>
+</html>

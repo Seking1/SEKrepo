@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <center>
+    <textarea id="aa" cols="30" rows="10"></textarea>
+    <button  id= "buttona" onclick ="get()">点击发送</button>
+    <div id ="spanarea"><span id= 'response'></span></div>
+    <script>
+    //点击按钮发起Ajax请求,并将textarea中的内容作为参数传递
+       function get(){
+        var a = document.getElementById("aa").value;
+     var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById('response').innerHTML=this.responseText;
+        }
+      };
+      xhttp.open("GET", "http://49.233.60.32:3005/chat?question="+a, false);
+      xhttp.send();
+    }
+</script></center>
+</body>
+</html>
