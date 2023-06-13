@@ -1,0 +1,1 @@
+使用前先烧录macaddress中的程序，获得该板的mac地址，更改msgsend中的broadcastAddress数组。
