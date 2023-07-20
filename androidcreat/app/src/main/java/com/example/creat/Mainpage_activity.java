@@ -11,17 +11,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class firstActivity extends AppCompatActivity {
+public class Mainpage_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.firstlayout);
-        Button button1=(Button)findViewById(R.id.button);
+        Button button1=(Button)findViewById(R.id.button_diary);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(firstActivity.this,secondActivity.class);
+                Intent intent= new Intent(Mainpage_activity.this, Wirtediary_activity.class);
                 startActivity(intent);
             }
         });
@@ -33,10 +33,10 @@ public class firstActivity extends AppCompatActivity {
     @SuppressLint("NonConstantResourceId")
     public boolean onOptionsItemSelected(MenuItem item){
         if(item.getItemId()==R.id.add_item){
-                    Toast.makeText(firstActivity.this,"add_item_option",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Mainpage_activity.this,"add_item_option",Toast.LENGTH_SHORT).show();
                 }
         if(item.getItemId()==R.id.remove_item){
-                Toast.makeText(firstActivity.this,"remove_item_option",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Mainpage_activity.this,"remove_item_option",Toast.LENGTH_SHORT).show();
         }
         return true;
     }

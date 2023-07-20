@@ -13,10 +13,10 @@
         android:theme="@style/Theme.Creat"
         tools:targetApi="31">
         <activity
-            android:name=".secondActivity"
+            android:name=".Wirtediary_activity"
             android:exported="false" />
         <activity
-            android:name=".firstActivity"
+            android:name=".Mainpage_activity"
             android:exported="true"
             android:label="first_act">
             <intent-filter>
