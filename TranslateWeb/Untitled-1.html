@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta  charset="UTF-8">
+<title>Trans</title>
+<script src="main.js"></script>
+<script src="download.min.js"></script>
+</head>
+<body>
+    <span id="Select">
+        <input type="file" id="file" onchange="Get(this)">
+        <input type="file"onchange="Getpos(this)">
+    </span>
+    <div style=" overflow:scroll;width: 850px; height:700px"><span id="originText"></span></div>
+    <div style="width: 700px;position: absolute;left: 900px;top: 100px;">
+        <table>
+            <tr>
+                <td>English:</td>
+              <td><span id="content">11111</span></td>
+            </tr>
+            <tr>
+                <td>Trans:</td>
+              <td><input id="changecontent" type="text"></td>
+              <td><button onclick="replace()">Repalce</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="prvSelect()">Prv</button></td>
+                <td><button onclick="Select()">Next</button></td>
+            </tr>
+            <tr>
+              <td><button onclick="Save()">SaveAndDownload</button></td>
+          </tr>
+          </table>   
+    </div>
+</body>
+
+</html>
